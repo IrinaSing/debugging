@@ -1,20 +1,20 @@
-'use strict';
+"use strict";
 
 /*
-  browser:
+  browser: the error shows itself in vscode, jsTututor. In browsers it is OK.
 
-  name:
-  message:
+  name: ReferenceError
+  message: welf is not defined
 
-  callstack:
+  callstack: I don't see it in browser
 
-  life cycle:
+  life cycle: execution phase
 
-  the mistake:
+  the mistake: there is no "let", "var" or "const" word before variable that should be declared.
 
-  the fix(es):
+  the fix(es): to add "let" to variable declaration
 */
 
-welf = 'ingrad';
+let welf = "ingrad";
 
 console.log(welf);
