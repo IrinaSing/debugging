@@ -1,22 +1,22 @@
-'use strict';
+"use strict";
 
 /*
-  browser:
+  browser: JS Tutor Live
 
-  name:
-  message:
+  name: ReferenceError
+  message: seven is not defined
 
-  callstack:
+  callstack: i do not find it
 
-  life cycle:
+  life cycle: execution phase
 
-  the mistake:
+  the mistake: there is  no declarative word before the variable name "seven"
 
-  the fix(es):
+  the fix(es): to add "let" before variable name
 */
 
 const add = (x = 0, y = 0) => {
   return x + y;
 };
 
-seven = add(3, 4);
+let seven = add(3, 4); // error, mistake
