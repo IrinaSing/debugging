@@ -1,20 +1,24 @@
-'use strict';
+"use strict";
 
 /*
-  browser:
+  browser: chrome
 
-  name:
-  message:
+  name: ReferenceError
+  message: Cannot access 'tomatoes' before initialization
 
-  callstack:
+  callstack: at <anonymous>:20:13
+    at HTMLIFrameElement.evaller.onload (study-with.js:40)
+    at Object.debugger (study-with.js:42)
+    at JavaScriptFE.studyWith (javascript-class.js:303)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:149)
 
-  life cycle:
+  life cycle: execution phase
 
-  the mistake:
+  the mistake: the variable "tomatoes" was declared after reading.
 
-  the fix(es):
+  the fix(es): To put declaration and initialization of the variable before it is read.
 */
 
-console.log(tomatoes);
+let tomatoes = "fresh";
 
-let tomatoes = 'fresh';
+console.log(tomatoes);
