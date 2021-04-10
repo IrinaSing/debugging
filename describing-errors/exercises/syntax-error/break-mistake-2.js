@@ -1,5 +1,4 @@
-'use strict';
-
+"use strict";
 
 /*
   browser: Chrome
@@ -15,14 +14,16 @@
 
   life cycle: creation phase
 
-  the mistake: there is no label declared although it is used with break
+  the mistake: there is no label declared although it is used with break. 
 
-  the fix(es): ????
+  the fix(es): There should be not break but return. Then console will return
+  the result of concatenation to the user.
 */
 
-
 const add = (x = 0, y = 0) => {
-  break x + y; // error
+  return x + y; // error, mistake
 };
 
 const seven = add(3, 4);
+
+console.log(seven);
