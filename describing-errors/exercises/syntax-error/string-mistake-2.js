@@ -14,9 +14,9 @@
 
   life cycle: creation phase
 
-  the mistake:
+  the mistake: ???
 
-  the fix(es):
+  the fix(es): ???
 */
 
 const anchorName = '#Home';
