@@ -1,18 +1,24 @@
-'use strict';
+"use strict";
 
 /*
-  browser:
+  browser: Chrome
 
-  name:
-  message:
+  name: SyntaxError
+  message: 
+  Chrome: Unexpected token '='
+  Mozilla: missing variable name
 
   callstack:
+    at HTMLIFrameElement.evaller.onload (study-with.js:40)
+    at Object.debugger (study-with.js:42)
+    at JavaScriptFE.studyWith (javascript-class.js:303)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:149)
 
-  life cycle:
+  life cycle: creation
 
-  the mistake:
+  the mistake: there is no variable name
 
-  the fix(es):
+  the fix(es): add variable name
 */
 
-const = 'always be learning';
+const studentMoto = "always be learning";
