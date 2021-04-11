@@ -1,20 +1,28 @@
-'use strict';
+"use strict";
 
 /*
-  browser:
+  browser: Chrome
 
-  name:
-  message:
+  name: TypeError
+  message: 
+  Chrome: Cannot read property 'length' of null
+  Mozilla: userInput is null
 
-  callstack:
+  callstack: 
+    at <anonymous>:22:23
+    at HTMLIFrameElement.evaller.onload (study-with.js:40)
+    at Object.debugger (study-with.js:42)
+    at JavaScriptFE.studyWith (javascript-class.js:303)
+    at HTMLButtonElement.<anonymous> (javascript-class.js:149)
 
-  life cycle:
+  life cycle: execution
 
-  the mistake:
+  the mistake: user input deliberately assigned to "null". Thus, lenght of null can not be measured. 
+  Lenght only applied to strings.
 
-  the fix(es):
+  the fix(es): change userInput value for strings.
 */
 
-const userInput = null;
+const userInput = "how long";
 
 console.log(userInput.length);
