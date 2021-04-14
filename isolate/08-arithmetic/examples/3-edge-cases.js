@@ -60,7 +60,7 @@ const zeroDivided_5 = 0 / NaN;
 
 /* Dividing by Infinity
   anything (except Infinity or NaN) divided by Infinity will give 0
-  careful, this is also true of values that coerce to 0!
+  careful, this is also true of values that coerce to Infinity!
 */
 
 const divideByInfinity_1 = 100 / Infinity;
