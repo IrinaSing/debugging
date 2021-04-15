@@ -14,13 +14,13 @@ console.assert(step0 === expected, "Step 0");
 /*
 
 */
-const step1 = _;
+const step1 = Number(a) === Number(b);
 console.assert(step1 === expected, "Step 1");
 
 /*
 
 */
-const step2 = _;
+const step2 = a + b === "14";
 console.assert(step2 === expected, "Step 2");
 
 /*
