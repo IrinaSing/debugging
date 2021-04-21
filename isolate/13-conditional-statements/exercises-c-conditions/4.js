@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // write a condition to take the correct path
 //  use value1, value2 & value3 in your expressions
@@ -6,22 +6,19 @@
 //  try to find as many as you can
 //  what do these solutions have in common?
 
-const value1 = '200';
+const value1 = "200";
 const value2 = 200;
-const value3 = false
-let path = '';
+const value3 = false;
+let path = "";
 
-if (_) {
-  path = 'if';
-
-} else if (_) {
-  path = 'else if 1';
-
-} else if (_) {
-  path = 'else if 2';
-
+if ((typeof value1 === typeof value2) === typeof value3) {
+  path = "if";
+} else if (value1 === value2 || typeof value3 === "strings") {
+  path = "else if 1";
+} else if (Number(value1) === value2 && !value3) {
+  path = "else if 2";
 } else {
-  path = 'else';
+  path = "else";
 }
 
-console.assert(path === 'else if 2', 'path should be "else if 2"');
+console.assert(path === "else if 2", 'path should be "else if 2"');

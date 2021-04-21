@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // write a condition to take the correct path
 //  use both value1 & value2 in your expression
@@ -6,14 +6,16 @@
 //  try to find as many as you can
 //  what do these solutions have in common?
 
-const value1 = 'hello';
+const value1 = "hello";
 const value2 = false;
-let path = '';
+let path = "";
 
-if (_) {
-  path = 'if';
+if (typeof value1 === typeof value2) {
+  path = "if";
 } else {
-  path = 'else';
+  path = "else";
 }
 
-console.assert(path === 'else', 'path should be "else"');
+console.assert(path === "else", 'path should be "else"');
+
+//if (Boolean(value1) === Boolean(value2)) {

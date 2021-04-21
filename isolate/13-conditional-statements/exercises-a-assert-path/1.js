@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
 // are there any unreachable paths?
+//no
 
 const value1 = true;
 const value2 = false;
-let path = '';
+let path = "";
 
 if (value1 && !value2) {
-  path = 'if';
-
+  path = "if";
 } else if (!value1 || !value2) {
-  path = 'else if';
+  path = "else if";
 }
 
-console.assert(path === _);
+console.assert(path === "if");

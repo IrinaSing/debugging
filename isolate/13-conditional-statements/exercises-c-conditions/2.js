@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // write a condition to take the correct path
 //  use both value1 & value2 in your expressions
@@ -8,16 +8,14 @@
 
 const value1 = null;
 const value2 = 400;
-let path = '';
+let path = "";
 
-if (_) {
-  path = 'if';
-
-} else if (_) {
-  path = 'else if';
-
+if (!value1 && !value2) {
+  path = "if";
+} else if (Number(value1) || Number(value2)) {
+  path = "else if";
 } else {
-  path = 'else';
+  path = "else";
 }
 
-console.assert(path === 'else if', 'path should be "else if"');
+console.assert(path === "else if", 'path should be "else if"');
