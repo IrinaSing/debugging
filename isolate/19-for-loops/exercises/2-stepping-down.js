@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* Stepping Down
 
@@ -17,18 +17,19 @@
 
 */
 
+const holiday = "winter solstice";
+const message = " days remaining until " + holiday;
 
-const holiday = 'winter solstice';
-const message = '_' + holiday;
-
-let tweet = '';
-for (let daysToHoliday = 14; _; _) {
+let tweet = "";
+for (let daysToHoliday = 14; daysToHoliday > 0; daysToHoliday--) {
   tweet = daysToHoliday + message;
   console.log(tweet);
 }
 
-console.assert(tweet === '1 days remaining until winter solstice', 'there are 0 days remaining');
+console.assert(
+  tweet === "1 days remaining until winter solstice",
+  "there are 0 days remaining"
+);
 
-const finalTweet = 'today is ' + holiday + '!';
+const finalTweet = "today is " + holiday + "!";
 console.log(finalTweet);
-

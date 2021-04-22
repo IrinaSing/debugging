@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* Uppercaseify
 
@@ -8,19 +8,21 @@
 
 */
 
-const lowerCaseString = 'abcde';
-console.log('lowerCaseString:', lowerCaseString);
+const lowerCaseString = "abcde";
+console.log("lowerCaseString:", lowerCaseString);
 
-let upperCaseString = '';
+let upperCaseString = "";
 
-for (_; _; _) {
+for (let stepper = 0; stepper < lowerCaseString.length; stepper++) {
+  const nextLetter = lowerCaseString[stepper];
+  const letterUpperCased = nextLetter.toUpperCase();
+  upperCaseString = upperCaseString + letterUpperCased;
 
-  const nextLetter = lowerCaseString[_];
-  const letterUpperCased = _._();
-  upperCaseString = _;
-
-  console.log(_); // your stepper variable
-  console.log('upperCaseString:', upperCaseString);
+  console.log(stepper); // your stepper variable
+  console.log("upperCaseString:", upperCaseString);
 }
 
-console.assert(upperCaseString === 'ABCDE', 'upper case string is all upper case');
+console.assert(
+  upperCaseString === "ABCDE",
+  "upper case string is all upper case"
+);
