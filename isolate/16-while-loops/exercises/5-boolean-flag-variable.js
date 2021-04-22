@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* Boolean Flag Variable
 
@@ -16,20 +16,22 @@
 
 // constant variables used throughout the script
 const longEnough = 14;
-const padding = '.:.';
+const padding = ".:.";
 
 // accumulator variable, collecting the final result
-let paddedString = 'hi';
+let paddedString = "hi";
 
 // boolean flag variable
 let isLongEnough = false;
-while (_) {
-  paddedString = _;
+while (!isLongEnough) {
+  paddedString = paddedString + padding;
   console.log(paddedString);
-  if (_) {
-    _;
+  if (paddedString.length === longEnough) {
+    isLongEnough = true;
   }
 }
 
-
-console.assert(paddedString === 'hi.:..:..:..:.', '"hi" should have 12 padding characters');
+console.assert(
+  paddedString === "hi.:..:..:..:.",
+  '"hi" should have 12 padding characters'
+);
