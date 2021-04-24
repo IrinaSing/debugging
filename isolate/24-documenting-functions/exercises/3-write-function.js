@@ -1,27 +1,32 @@
-'use strict';
+"use strict";
 
 // write the function to pass the assertions
 // fill in the documentation to describe the function
 
 /**
- *
+ * this returns a single string containing it's parameters
+ * but rearranged into a different order
+ * @param {string} param1 becomes the 2 string in the result
+ * @param {string} param2 becomes the 3 string in the result
+ * @param {string} param3 becomes the 1 string in the result
+ * @returns {string} a string with p1 -> r2, p2 -> r3, p3 -> r1
  */
-const scramble = () => {
-
+const scramble = (param1, param2, param3) => {
+  const result = `${param3}${param1}${param2}`;
+  return result;
 };
 
 const _1_expect = "yxz";
-const _1_actual = scramble('x', 'z', 'y');
+const _1_actual = scramble("x", "z", "y");
 const _1_test = _1_actual === _1_expect;
-console.assert(_1_test, 'Test 1');
+console.assert(_1_test, "Test 1");
 
 const _2_expect = "zxy";
-const _2_actual = scramble('x', 'y', 'z');
+const _2_actual = scramble("x", "y", "z");
 const _2_test = _2_actual === _2_expect;
-console.assert(_2_test, 'Test 2');
+console.assert(_2_test, "Test 2");
 
 const _3_expect = "yzx";
-const _3_actual = scramble('z', 'x', 'y');
+const _3_actual = scramble("z", "x", "y");
 const _3_test = _3_actual === _3_expect;
-console.assert(_3_test, 'Test 3');
-
+console.assert(_3_test, "Test 3");
