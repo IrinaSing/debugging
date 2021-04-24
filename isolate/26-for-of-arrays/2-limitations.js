@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
   for...of loops make it very easy to iterate through an array
@@ -14,16 +14,16 @@
 
 */
 
-const trees = ['birch', 'larch', 'oak', 'maple'];
+const trees = ["birch", "larch", "oak", "maple"];
 
 // log the array items in reverse order
 for (let i = trees.length - 1; i >= 0; i--) {
   const tree = trees[i];
-  console.log('- ' + tree);
+  console.log("- " + tree);
 }
 
 // log every other item in the array
-for (let i = trees.length - 1; i >= 0; i += 2) {
+for (let i = 1; i <= trees.length - 1; i += 2) {
   const tree = trees[i];
-  console.log('- ' + tree);
+  console.log("- " + tree);
 }
