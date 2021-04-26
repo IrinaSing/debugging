@@ -1,9 +1,12 @@
-'use strict';
+"use strict";
 
 // fill in the blank to pass the assertion
 
-const interactionValue = _('asdf');
+const interactionValue = alert("asdf");
 
-console.log('interactionValue:', typeof interactionValue, interactionValue);
+console.log("interactionValue:", typeof interactionValue, interactionValue);
 
-console.assert(typeof interactionValue === 'undefined', 'interactionValue should be undefined');
+console.assert(
+  typeof interactionValue === "undefined",
+  "interactionValue should be undefined"
+);
