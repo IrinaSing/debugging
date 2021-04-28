@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const instructions = `Two-Player Remembery
 
@@ -12,13 +12,13 @@ const instructions = `Two-Player Remembery
 `;
 alert(instructions);
 
-alert('Player 2: go hide');
+alert("Player 2: go hide");
 
-const phrase1 = prompt('Player 1, enter your first phrase:');
-const phrase2 = prompt('Player 1, enter your second phrase:');
-const phrase3 = prompt('Player 1, enter your third phrase:');
+const phrase1 = prompt("Player 1, enter your first phrase:");
+const phrase2 = prompt("Player 1, enter your second phrase:");
+const phrase3 = prompt("Player 1, enter your third phrase:");
 
-alert('Player 2, get back here');
+alert("Player 2, get back here");
 
 const phrasesToRemember = `Player 2, remember these:
   1. "${phrase1}"
@@ -28,7 +28,20 @@ const phrasesToRemember = `Player 2, remember these:
 alert(phrasesToRemember);
 
 /* -- BEGIN: gather player 2's guesses) -- */
+const guess1 = prompt("Player 2, guess the first phrase:");
+const guess2 = prompt("Player 2, guess the second phrase:");
+const guess3 = prompt("Player 2, guess the third phrase:");
 
+let points = 0;
+if (phrase1 === guess1) {
+  points = points + 1;
+}
+if (phrase2 === guess2) {
+  points = points + 1;
+}
+if (phrase3 === guess3) {
+  points = points + 1;
+}
 /* -- END: gather player 2's guesses -- */
 
 alert(`your score: ${points}`);
