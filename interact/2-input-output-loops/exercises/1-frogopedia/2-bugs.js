@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* look out for:
 
@@ -7,19 +7,19 @@
 
 */
 
-let userInput = '';
-let inputIsAboutFrogs = true;
+let userInput = "";
+let inputIsAboutFrogs = false;
 while (!inputIsAboutFrogs) {
-  userInput = prompt('tell me something about frogs');
+  userInput = prompt("tell me something about frogs");
 
-  if (inputIsAboutFrogs === '' && inputIsAboutFrogs === null) {
-    alert('that is not something');
+  if (userInput === "" || userInput === null) {
+    alert("that is not something");
   }
   // regular expression: this works!
-  else if (/frog/i.test(userInput) === true) {
-    inputIsAboutFrogs = false;
+  else if (userInput.search(/frog/i) > -1) {
+    inputIsAboutFrogs = true;
   } else {
-    alert('nope, not about frogs.  try again.');
+    alert("nope, not about frogs.  try again.");
   }
 }
 
