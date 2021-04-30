@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* look out for:
 
@@ -8,19 +8,19 @@
 
 */
 
-let userInput = '';
+let userInput = "";
 let userConfirmed = false;
-while (userConfirmed) {
-  userInput = prompt('enter your name:');
-  console.log('userInput:', typeof userInput, userInput);
+while (!userConfirmed) {
+  userInput = prompt("enter your name:");
+  console.log("userInput:", typeof userInput, userInput);
 
-  if (userInput === false) {
-    alert('nothing is not a name');
+  if (userInput === "" || userInput === null) {
+    alert("nothing is not a name");
     continue;
   }
 
   const confirmMessage = 'is this correct?\n"' + userInput + '"';
-  userConfirmed = alert(confirmMessage);
+  userConfirmed = confirm(confirmMessage);
 }
 
 const finalMessage = `your name is: "${userInput}"`;
