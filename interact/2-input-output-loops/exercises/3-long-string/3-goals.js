@@ -5,12 +5,9 @@ while (userInput === "") {
   /* -- BEGIN: validate input -- */
   userInput = prompt("enter smth longer than 5");
 
-  if (userInput === null) {
+  if (userInput === null || userInput === "") {
     alert("Nothing");
-    continue;
-  }
-
-  if (userInput.length <= 5) {
+  } else if (userInput.length <= 5) {
     alert("It is too short");
   } else {
     break;
