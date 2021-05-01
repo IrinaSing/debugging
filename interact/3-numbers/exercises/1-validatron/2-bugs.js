@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* look out for:
 
@@ -8,15 +8,15 @@
 
 */
 
-const userString = prompt('enter a number:');
+const userString = prompt("enter a number:");
 const userNumber = Number(userString);
 
-const inputIsANumber = !Number(userNumber);
+const inputIsANumber = !Number.isNaN(userNumber);
 
 const confirmMessage =
-  'did you really enter a number?\n\n' + 'yes -> "ok"\n' + 'no  -> "cancel"';
-const userThinksItsANumber = alert(confirmMessage);
+  "did you really enter a number?\n\n" + 'yes -> "ok"\n' + 'no  -> "cancel"';
+const userThinksItsANumber = confirm(confirmMessage);
 
-const userIsCorrect = (userThinksItsANumber = inputIsANumber);
+const userIsCorrect = userThinksItsANumber === inputIsANumber;
 
-alert(userIsCorrect ? 'correct!' : 'nope :(');
+alert(userIsCorrect ? "correct!" : "nope :(");
