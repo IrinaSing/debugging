@@ -7,10 +7,12 @@ while (userInput === "") {
 
   if (userInput === null || userInput === "") {
     alert("Nothing");
+    userInput = "";
   } else if (userInput.length <= 5) {
     alert("It is too short");
+    userInput = "";
   } else {
-    break;
+    //
   }
   /* -- END: validate input -- */
 }
