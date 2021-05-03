@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
   only keep words that are the right length
@@ -18,22 +18,53 @@ then enter a length
 //  but the variable will still reference the same array
 const words = [];
 
-while (_) {
+while (true) {
   /* == BEGIN: gather words until the user cancels == */
+  const input = prompt("Enter words to filter");
+
+  if (input === null) {
+    break;
+  } else if (input === "") {
+    alert("Nothing");
+  } else {
+    const withWhiteSpaces = new RegExp("\\s", "g").test(input);
+    if (withWhiteSpaces) {
+      alert("words can not contain white spaces");
+    } else {
+      words.push(input);
+    }
+  }
   /* == END == */
 }
 
 // -- get the length to filter --
 let lengthToKeep = NaN;
 
-while (_) {
+while (true) {
   /* == BEGIN: a number from the user == */
+  const input = prompt("Enter lenghts to filter");
+
+  lengthToKeep = Number(input);
+  if (lengthToKeep === "" || lengthToKeep === null) {
+    alert("Enter something");
+    continue;
+  } else if (Number.isNaN(lengthToKeep)) {
+    alert(lengthToKeep + " is not a number");
+  } else {
+    break;
+  }
   /* == END == */
 }
 
 // -- keep only words with the right length --
 const keepThese = [];
 /* == BEGIN: filter out words that are not the correct length == */
+for (const word of words) {
+  if (word.length === lengthToKeep) {
+    keepThese.push(word);
+  }
+}
+
 /* == END == */
 
 // -- generate a message for the user --

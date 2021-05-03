@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 
@@ -22,15 +22,15 @@ while (true) {
   const input = prompt('enter a word or click "cancel"');
 
   if (input === null) {
-    continue;
-  } else if (input === '') {
-    alert('nothing is not allowed');
+    break;
+  } else if (input === "") {
+    alert("nothing is not allowed");
   } else {
-    const containsWhitespace = new RegExp('\\s', 'g').test(input);
+    const containsWhitespace = new RegExp("\\s", "g").test(input);
     if (containsWhitespace) {
-      words.push(input);
-    } else {
       alert("words can't have white space");
+    } else {
+      words.push(input);
     }
   }
 }
@@ -39,12 +39,12 @@ while (true) {
 let lengthToKeep;
 let isNumber = false;
 while (!isNumber) {
-  const input = prompt('how long should the words be? enter a number:');
+  const input = prompt("how long should the words be? enter a number:");
   lengthToKeep = Number(input);
 
-  if (input === '' || input === null) {
-    alert('enter something');
-    break;
+  if (input === "" || input === null) {
+    alert("enter something");
+    continue;
   }
 
   if (Number.isNaN(lengthToKeep)) {
@@ -56,15 +56,15 @@ while (!isNumber) {
 
 // -- keep only words with the right length --
 const keepThese = [];
-for (const word in words) {
+for (const word of words) {
   if (word.length === lengthToKeep) {
-    keepThese.push(word.length);
+    keepThese.push(word);
   }
 }
 
 // -- generate a message for the user --
 let message = `length: ${lengthToKeep}\nwords: `;
-for (const word in keepThese) {
+for (const word of keepThese) {
   message += `${word}, `;
 }
 
