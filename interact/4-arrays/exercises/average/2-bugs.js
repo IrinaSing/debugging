@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 
@@ -23,27 +23,27 @@ while (true) {
   const input = prompt('enter the next number or "done"');
 
   // -- validate the input --
-  if (input === 'done') {
+  if (input === "done") {
     // -- check if the user is done --
     break;
   }
 
   const nextNumber = Number(input);
-  if (input === null || input === '') {
+  if (input === null || input === "") {
     // -- check if the user input nothing --
-    alert('nothing is not allowed');
+    alert("nothing is not allowed");
   } else if (Number.isNaN(nextNumber)) {
     // -- alert if input was not a number --
     alert(`"${input}" is not a number`);
   } else {
     // -- push the input if it was a number --
-    numbers.pop(nextNumber);
+    numbers.push(nextNumber);
   }
 }
 
 // -- calculate the sum --
 let sum = 0;
-for (let i = 0; i < numbers; i++) {
+for (let i = 0; i < numbers.length; i++) {
   const number = numbers[i];
   sum += number;
 }

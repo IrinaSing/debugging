@@ -1,38 +1,44 @@
-'use strict';
+"use strict";
 
 const instructions =
-  'calculate the sum of many numbers:\n\n' +
-  '- you must input something\n' +
-  '- input a number and it will be added to the sum\n' +
+  "calculate the sum of many numbers:\n\n" +
+  "- you must input something\n" +
+  "- input a number and it will be added to the sum\n" +
   '- input "done" and the program will finish (case insensitive)\n' +
-  '- input anything else and it will be ignored';
+  "- input anything else and it will be ignored";
 alert(instructions);
 
 let sum = 0;
 
-let userInput = '';
+let userInput = "";
 while (true) {
   userInput = prompt('enter a number to add, or "done" to finish');
-  console.log('userInput:', typeof userInput, userInput);
+  console.log("userInput:", typeof userInput, userInput);
 
   // make sure the user input something
-  ___;
+  if (userInput === "" || userInput === null) {
+    continue;
+  }
 
   // check if the user input is "done", case-insensitive
-  if (_) {
+  if (userInput.toLowerCase() === "done") {
     break;
   }
 
   const nextNumber = Number(userInput);
-  console.log('nextNumber:', typeof nextNumber, nextNumber);
+  console.log("nextNumber:", typeof nextNumber, nextNumber);
 
   // continue if the input is not a number
-  ___;
+  if (Number.isNaN(nextNumber)) {
+    alert("It is not a number. Ignored.");
+    continue;
+  }
 
   // add the new number to the sum
-  _;
-  console.log('sum:', typeof sum, sum);
+  sum = sum + nextNumber;
+  console.log("sum:", typeof sum, sum);
+  continue;
 }
 
-const sumMessage = 'the sum of your numbers is: ' + sum;
+const sumMessage = "the sum of your numbers is: " + sum;
 alert(sumMessage);

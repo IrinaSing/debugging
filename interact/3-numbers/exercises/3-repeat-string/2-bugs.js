@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* look out for:
 
@@ -9,17 +9,17 @@
 
 */
 
-const userInput = '';
-const repetitions = NaN;
+let userInput = "";
+let repetitions = NaN;
 while (true) {
-  userInput = prompt('enter a phrase to repeat:');
+  userInput = prompt("enter a phrase to repeat:");
 
-  if (userInput === '' || userInput === null) {
-    alert('nope, enter something');
+  if (userInput === "" || userInput === null) {
+    alert("nope, enter something");
     continue;
   }
 
-  const repetitionsInput = prompt('how many times do you want to repeat it?');
+  const repetitionsInput = prompt("how many times do you want to repeat it?");
 
   repetitions = Number(repetitionsInput);
 
@@ -29,14 +29,17 @@ while (true) {
   }
 
   const confirmMessage =
-    'is this correct?\n\n' + '- "' + userInput + '"\n' + '- ' + repetitions;
+    "is this correct?\n\n" + '- "' + userInput + '"\n' + "- " + repetitions;
   const confirmation = confirm(confirmMessage);
+  if (confirmation) {
+    break;
+  }
 }
 
-let repeatedInput = '';
+let repeatedInput = "";
 
-for (let i = 1; i < repetitions; i++) {
-  repeatedInput = userInput;
+for (let i = 0; i < repetitions; i++) {
+  repeatedInput = repeatedInput + userInput;
 }
 
-alert(`"userInput" -> "repeatedInput"`);
+alert(`${userInput} -> ${repeatedInput}`);
