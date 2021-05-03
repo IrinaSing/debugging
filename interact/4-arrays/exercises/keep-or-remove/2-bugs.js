@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 
@@ -18,15 +18,15 @@ When you're done entering strings press "cancel"`
 
 // -- gather user nextInput --
 const strings = [];
-let nextInput = '';
-while (nextInput === null) {
+let nextInput = "";
+while (nextInput !== null) {
   nextInput = prompt('enter the next phrase or press "cancel"');
 
   // -- validate the nextInput --
-  if (nextInput === '') {
+  if (nextInput === "") {
     // -- check if the user nextInput nothing --
-    alert('nothing is not allowed');
-  } else if (typeof nextInput !== 'null') {
+    alert("nothing is not allowed");
+  } else if (nextInput !== null) {
     // -- push the nextInput --
     strings.push(nextInput);
   }
@@ -35,15 +35,15 @@ while (nextInput === null) {
 // -- allow the user to filter their nextInputs --
 const filtered = [];
 for (const text of strings) {
-  const keepIt = alert(`do you want to keep "${text}"?`);
+  const keepIt = confirm(`do you want to keep "${text}"?`);
   if (keepIt) {
     filtered.push(text);
   }
 }
 
 // -- build the final message --
-let message = '';
-for (const i = 0; i < strings.length; i++) {
+let message = "";
+for (let i = 0; i < filtered.length; i++) {
   const text = filtered[i];
   message += `- "${text}"\n`;
 }

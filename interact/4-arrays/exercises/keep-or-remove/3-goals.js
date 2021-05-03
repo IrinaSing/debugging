@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
   gathers input from a user until they cancel
@@ -24,9 +24,9 @@ while (true) {
   if (input === null) {
     // -- check if the user is done --
     break;
-  } else if (input === '') {
+  } else if (input === "") {
     // -- check if the user input nothing --
-    alert('nothing is not allowed');
+    alert("nothing is not allowed");
   } else {
     // -- push the input --
     strings.push(input);
@@ -36,17 +36,23 @@ while (true) {
 // -- allow the user to filter their inputs --
 const saved = [];
 /* == BEGIN: a loop for the user to filter their inputs == */
+for (let i = 0; i < strings.length; i++) {
+  const keepIt = confirm(`Do you want to save it: "${strings[i]}"" ?`);
 
+  if (keepIt) saved.push(strings[i]);
+}
 /* == END == */
 
 // -- build the final message --
-let message = '';
+let message = "";
 /* == BEGIN: a loop to build the final message == */
-
+for (const text of saved) {
+  message += ` - "${text}"\n`;
+}
 /* == END == */
 
 // -- alert the final message --
 alert(message);
 
 // -- log for the developer --
-console.log(strings, filtered);
+console.log(strings, saved);
