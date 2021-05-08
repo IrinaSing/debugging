@@ -4,12 +4,34 @@
  * reverses an array without modifying the parameter
  *
  */
+/*
+*using method
 const reverseArray = (arr = [], index = 0) => {
   const newArray = [];
   for (const item of arr) {
     newArray.push(item);
   }
   return newArray.reverse();
+};
+*/
+
+/*
+*using method reverse
+const reverseArray = (arr = [], index = 0) => {
+  const newArray = [];
+  for (const item of arr) {
+    newArray.push(item);
+  }
+  return newArray.reverse();
+};
+*/
+
+const reverseArray = (arr = [], index = 0) => {
+  let newArray = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newArray.push(arr[i]);
+  }
+  return newArray;
 };
 
 const arr1 = [1, 2, 3];
